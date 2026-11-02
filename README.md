@@ -5,11 +5,11 @@ Caviedes, Francisco
 Monsalvo, Lucas
 
 
-Plataforma de Preguntas y Respuestas (Q&A)
+Plataforma de Preguntas y Respuestas
 
-Este proyecto es el diseño en UML de una plataforma donde los estudiantes hacen preguntas y reciben respuestas, ya sea de otros usuarios o de una inteligencia artificial. Acá explicamos cómo lo armamos y por qué.
+Este proyecto es el diseño en UML de una plataforma donde los estudiantes hacen preguntas y reciben respuestas, ya sea de otros usuarios o de una inteligencia artificial. 
 
-Cómo está armado el sistema
+Cómo está armado el sistema:
 
 Preguntas y respuestas: un usuario hace una pregunta con título, texto y fecha. Cada pregunta tiene una sola categoría (por ejemplo Python o Flask) y puede tener varias etiquetas. Una pregunta puede recibir muchas respuestas, y cada respuesta guarda su texto, su fecha y si fue marcada como aceptada.
 
