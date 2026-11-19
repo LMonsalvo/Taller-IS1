@@ -1,10 +1,13 @@
 import random
 from datetime import datetime
-from estrategias_ia import Strategy
 
-from usuario import Autor 
-from respuesta import Respuesta
-from pregunta import Pregunta
+from models.estrategias_ia import Strategy
+from models.pregunta import Pregunta
+from models.respuesta import Respuesta
+
+# Cuando tu compañero suba los cambios, estas importaciones conectarán automáticamente
+from models.usuario import Autor
+
 
 class Hashtags:
     def __init__(self, tipoHash: str):

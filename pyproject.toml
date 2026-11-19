@@ -1,0 +1,22 @@
+[project]
+name = "taller-is1"
+version = "0.1.0"
+description = "Collaborative Q&A platform for Software Engineering workshop"
+readme = "README.md"
+authors = [
+    { name = "MarcosCastill0", email = "marcos427castillo@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.3",
+    "flask-migrate>=4.1.0",
+    "flask-sqlalchemy>=3.1.1",
+    "pydantic>=2.13.5",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.17.6",
+]
