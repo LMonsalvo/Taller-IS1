@@ -15,7 +15,6 @@ class Hashtags:
 
 class AgenteIA(Autor):
     def __init__(self, nombre: str, fechaDeAlta: str, rango: str, modelo: str, estado: str, etiqueta: str, estrategia: Strategy):
-        # Inicializa la clase padre (Autor) con la firma exacta que armo tu compañero
         super().__init__(nombre=nombre, fechaDeAlta=fechaDeAlta, rango=rango)
         
         self.modelo = modelo
