@@ -84,5 +84,5 @@ Flujo de trabajo
 
 1. Cada tarea es un Issue en el GitHub Project, con un responsable.
 2. Se trabaja en una rama por Issue: `feature/issue-N-nombre`.
-3. Los commits llevan el número del Issue, por ejemplo `(#4)`.
+3. Los commits llevan el número del Issue.
 4. Se abre un Pull Request con `Closes #N`, otro integrante lo revisa y se integra a `main`.
