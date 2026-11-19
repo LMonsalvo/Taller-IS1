@@ -24,3 +24,63 @@ Strategy (la IA y sus modelos): la IA puede usar distintos modelos, como Gemini,
 Autor (humanos e IA por igual): la consigna pedía que una respuesta pudiera venir de una persona o de la IA. Por eso creamos la clase abstracta Autor, de la que heredan Usuario y AgenteIA. La clase Respuesta se conecta con Autor y no con Usuario, así que no le importa quién la escribió. Las dos clases hijas tienen su propia versión de generarRespuesta.
 
 Cuándo responde la IA: AgenteIA tiene una etiqueta que lo activa (por ejemplo #ia-help) y un método debeResponder(p). Con eso decide si una pregunta tiene esa etiqueta o si lleva mucho tiempo sin que nadie la conteste.
+
+Estructura del proyecto
+
+```
+Taller-IS1/
+├── app/                 # Aplicación Flask
+├── models/              # Clases de dominio (Voto, Reporte, Pregunta, CategoriaPregunta, ...)
+├── migrations/          # Migraciones de la base de datos
+├── tests/               # Tests con pytest
+├── pyproject.toml       # Dependencias y configuración
+├── uv.lock              # Versiones exactas de las dependencias
+├── FotoDiagrama.png     # Diagrama de clases UML
+└── README.md
+```
+
+Stack tecnológico
+
+- **Gestor de entorno y dependencias:** uv
+- **Lenguaje:** Python 3.12+
+- **Backend:** Flask
+- **Persistencia:** Flask-SQLAlchemy y Flask-Migrate (Alembic), SQLite
+- **Validación:** Pydantic
+- **Tests:** Pytest y Pytest-Cov
+- **Calidad de código:** Ruff
+
+Cómo ejecutar el proyecto
+
+Necesitás tener instalado [uv](https://docs.astral.sh/uv/) y Python 3.12 o superior.                  
+
+Instalá las dependencias:
+```
+uv sync
+```
+
+Creá la base de datos:
+```
+uv run flask --app app db upgrade
+```
+
+Iniciá la aplicación y abrila en `http://localhost:5000`:
+```
+uv run flask --app app run
+```
+
+Para correr los tests:
+```
+uv run pytest
+```
+
+Para revisar el código:
+```
+uv run ruff check .
+```
+
+Flujo de trabajo
+
+1. Cada tarea es un Issue en el GitHub Project, con un responsable.
+2. Se trabaja en una rama por Issue: `feature/issue-N-nombre`.
+3. Los commits llevan el número del Issue, por ejemplo `(#4)`.
+4. Se abre un Pull Request con `Closes #N`, otro integrante lo revisa y se integra a `main`.
