@@ -68,6 +68,8 @@ Iniciá la aplicación y abrila en `http://localhost:5000`:
 uv run flask --app app run
 ```
 
+Para comprobar que funciona, abrí `http://localhost:5000/health`: tiene que mostrar `{"status":"ok"}`.
+
 Para correr los tests:
 ```
 uv run pytest
