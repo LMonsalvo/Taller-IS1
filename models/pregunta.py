@@ -1,6 +1,7 @@
 from app.extensions import db
 
-
+# Le dice a SQLAlchemy que esta clase corresponde a la tabla "preguntas" y define
+# qué columnas va a tener (clave primaria, campos obligatorios y relación con usuarios).
 class Pregunta(db.Model):
     __tablename__ = "preguntas"
 
@@ -10,6 +11,8 @@ class Pregunta(db.Model):
     fechaDePublicacion = db.Column(db.String(40), nullable=False)
     usuario_id = db.Column(db.Integer, db.ForeignKey("usuarios.id"), nullable=True)
 
+    # Recibe los datos al crear una Pregunta y verifica que título, texto y categoría
+    # sean válidos antes de avanzar (si no, lanza ValueError).
     def __init__(
         self,
         id: int | None,
