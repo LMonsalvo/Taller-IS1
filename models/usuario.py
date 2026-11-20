@@ -25,7 +25,8 @@ class Autor(db.Model):
     def generarRespuesta(self, pregunta):
         pass
 
-
+# Crea la tabla "usuarios" y configura la herencia polimórfica mediante `tipo_usuario`
+# para distinguir entre `Usuario`, `UsuarioPromedio` y `Administrador` en la misma tabla.
 class Usuario(Autor):
     __tablename__ = "usuarios"
 
