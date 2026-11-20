@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Collaborative Q&A platform for Software Engineering workshop"
 readme = "README.md"
 authors = [
-    { name = "MarcosCastill0", email = "marcos427castillo@gmail.com" }
+    { name = "MarcosCastill0", email = "marcos427castillo@gmail.com" },
+    { name = "franncaviedes", email = "francaviedes9@gmail.com" },
+    { name = "LMonsalvo", email = "monsalvolucas9@gmail.com" },
+]
 ]
 requires-python = ">=3.12"
 dependencies = [
