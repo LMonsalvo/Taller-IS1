@@ -8,7 +8,7 @@ authors = [
     { name = "franncaviedes", email = "francaviedes9@gmail.com" },
     { name = "LMonsalvo", email = "monsalvolucas9@gmail.com" },
 ]
-]
+
 requires-python = ">=3.12"
 dependencies = [
     "flask>=3.1.3",
